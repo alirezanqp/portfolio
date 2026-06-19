@@ -1,0 +1,44 @@
+---
+const certifications = [
+  {
+    title: 'GitLab CI/CD Specialist',
+    issuer: 'GitLab',
+    date: 'June 2022',
+  },
+  {
+    title: 'GitLab Certified Git Associate',
+    issuer: 'GitLab',
+    date: 'June 2022',
+  },
+];
+---
+
+<section id="education" class="py-24 border-t border-gray-200 dark:border-white/5">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="font-mono text-xs text-emerald-600 dark:text-[#00ff87] tracking-widest uppercase mb-12">Education & Certifications</h2>
+
+    <div class="grid sm:grid-cols-2 gap-12">
+      <div>
+        <div class="mb-2">
+          <span class="font-mono text-xs text-gray-400 dark:text-gray-600">Sep 2021 — Present</span>
+        </div>
+        <h3 class="text-gray-900 dark:text-white font-semibold mb-1">Bachelor's in Software Engineering</h3>
+        <p class="text-sm text-gray-500">Qazvin Islamic Azad University</p>
+      </div>
+
+      <div>
+        <h3 class="font-mono text-xs text-gray-400 dark:text-gray-600 uppercase tracking-widest mb-5">Certifications</h3>
+        <div class="space-y-4">
+          {certifications.map(cert => (
+            <div class="flex items-start gap-4 p-4 border border-gray-200 dark:border-white/5 rounded bg-gray-50 dark:bg-white/2">
+              <div>
+                <p class="text-gray-900 dark:text-white text-sm font-medium mb-0.5">{cert.title}</p>
+                <p class="font-mono text-xs text-gray-400 dark:text-gray-600">{cert.issuer} · {cert.date}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

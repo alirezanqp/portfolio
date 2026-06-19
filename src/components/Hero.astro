@@ -1,0 +1,49 @@
+---
+const links = [
+  { href: 'mailto:alirezanqp@gmail.com', label: 'alirezanqp@gmail.com', icon: 'email' },
+  { href: 'https://github.com/alirezanqp', label: 'github.com/alirezanqp', icon: 'github' },
+  { href: 'https://linkedin.com/in/alirezanqp', label: 'linkedin.com/in/alirezanqp', icon: 'linkedin' },
+];
+---
+
+<section class="min-h-screen flex items-center pt-14">
+  <div class="max-w-4xl mx-auto px-6 py-24">
+    <div class="mb-4">
+      <span class="font-mono text-xs text-emerald-600 dark:text-[#00ff87] tracking-widest uppercase">Available for opportunities</span>
+    </div>
+    <h1 class="text-5xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
+      Alireza Naghdipour
+    </h1>
+    <p class="text-xl text-emerald-600 dark:text-[#00ff87] font-mono mb-6">Backend Software Engineer</p>
+    <p class="text-gray-600 dark:text-gray-400 max-w-xl leading-relaxed mb-10 text-lg">
+      Building scalable distributed systems with a focus on Domain-Driven Design,
+      event-driven architectures, and clean hexagonal patterns.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 mb-10">
+      <a
+        href="/#experience"
+        class="inline-flex items-center justify-center px-6 py-3 bg-emerald-500 dark:bg-[#00ff87] text-white dark:text-black font-semibold text-sm rounded hover:bg-emerald-600 dark:hover:bg-[#00e87a] transition-colors"
+      >
+        View Experience
+      </a>
+      <a
+        href="/posts"
+        class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 dark:border-white/10 text-gray-700 dark:text-white text-sm rounded hover:border-gray-400 dark:hover:border-white/30 transition-colors"
+      >
+        Read Posts
+      </a>
+    </div>
+    <div class="flex flex-col gap-2">
+      {links.map(link => (
+        <a
+          href={link.href}
+          target={link.icon !== 'email' ? '_blank' : undefined}
+          rel={link.icon !== 'email' ? 'noopener noreferrer' : undefined}
+          class="font-mono text-sm text-gray-500 dark:text-gray-500 hover:text-emerald-600 dark:hover:text-[#00ff87] transition-colors"
+        >
+          <span class="text-gray-400 dark:text-gray-600 mr-2">→</span>{link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

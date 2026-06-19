@@ -1,0 +1,41 @@
+---
+const categories = [
+  {
+    label: 'Architecture & Design',
+    items: ['Domain-Driven Design', 'Hexagonal Architecture', 'Clean Architecture', 'System Design', 'Distributed Systems', 'CQRS', 'Event-Driven Architecture'],
+  },
+  {
+    label: 'Languages & Runtimes',
+    items: ['TypeScript', 'Node.js', 'Golang'],
+  },
+  {
+    label: 'Databases & Caching',
+    items: ['PostgreSQL', 'MongoDB', 'Redis'],
+  },
+  {
+    label: 'Infrastructure & DevOps',
+    items: ['Docker', 'Linux', 'AWS', 'RabbitMQ', 'GitLab CI', 'GitHub Actions'],
+  },
+];
+---
+
+<section id="skills" class="py-24 border-t border-gray-200 dark:border-white/5">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="font-mono text-xs text-emerald-600 dark:text-[#00ff87] tracking-widest uppercase mb-12">Skills</h2>
+
+    <div class="grid sm:grid-cols-2 gap-10">
+      {categories.map(cat => (
+        <div>
+          <h3 class="font-mono text-xs text-gray-400 dark:text-gray-600 uppercase tracking-widest mb-4">{cat.label}</h3>
+          <div class="flex flex-wrap gap-2">
+            {cat.items.map(item => (
+              <span class="px-3 py-1 text-sm bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/8 text-gray-700 dark:text-gray-300 rounded">
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

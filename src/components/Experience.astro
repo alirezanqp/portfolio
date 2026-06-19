@@ -1,0 +1,77 @@
+---
+const jobs = [
+  {
+    company: 'Infinite',
+    role: 'Software Engineer',
+    period: 'Jun 2024 — Present',
+    type: 'Full-Time · Remote',
+    location: 'United Arab Emirates',
+    points: [
+      'Designed and developed a multi-tenant SaaS platform for online menus using Hexagonal Architecture and Domain-Driven Design principles.',
+      'Integrated Stripe for subscription management and automated billing.',
+      'Added online booking, marketing automation, and analytics features, increasing restaurant engagement and retention.',
+      'Leveraged LLM (OpenAI) to enhance business content: menu/items descriptions, promotions, and customer messages.',
+      'Implemented event-driven workflows to ensure reliable cross-service communication.',
+    ],
+  },
+  {
+    company: 'Nobati',
+    role: 'Software Engineer',
+    period: 'Jan 2023 — May 2025',
+    type: 'Part-Time · Hybrid',
+    location: 'Iran',
+    points: [
+      'Migrated JavaScript codebase into TypeScript, leveraging DDD, TDD for improved code quality and scalability.',
+      'Implemented Event-Driven Architecture, Hexagonal Architecture, and CQRS for modular, scalable systems.',
+      'Contributed to the success of a company serving over 200,000 users by modernizing development practices.',
+      'Orchestrated monitoring services and set up alarms for proactive issue resolution.',
+      'Implemented backup strategies for databases and user data to ensure data integrity and availability.',
+      'Established GitOps workflows and CI/CD pipelines with automated testing and deployment.',
+    ],
+  },
+  {
+    company: 'Azar Group',
+    role: 'Backend Engineer',
+    period: 'Mar 2024 — Aug 2024',
+    type: 'Full-Time · Remote',
+    location: 'Iran',
+    points: [
+      'Worked on PeikAva, a platform for government and public organizations to disseminate reports and activities.',
+      'Developed and optimized backend services using NestJS and PostgreSQL.',
+      'Designed advanced search capabilities with diverse categories and precise geolocation settings.',
+    ],
+  },
+];
+---
+
+<section id="experience" class="py-24 border-t border-gray-200 dark:border-white/5">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="font-mono text-xs text-emerald-600 dark:text-[#00ff87] tracking-widest uppercase mb-12">Experience</h2>
+
+    <div class="space-y-16">
+      {jobs.map((job) => (
+        <div class="grid sm:grid-cols-[200px_1fr] gap-6">
+          <div class="sm:pt-0.5">
+            <p class="font-mono text-xs text-gray-400 dark:text-gray-600 leading-relaxed">
+              {job.period}<br />
+              {job.type}<br />
+              {job.location}
+            </p>
+          </div>
+          <div>
+            <h3 class="text-gray-900 dark:text-white font-semibold text-lg mb-0.5">{job.company}</h3>
+            <p class="text-emerald-600 dark:text-[#00ff87] font-mono text-sm mb-5">{job.role}</p>
+            <ul class="space-y-2">
+              {job.points.map(point => (
+                <li class="flex gap-3 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                  <span class="text-gray-300 dark:text-gray-700 mt-1.5 shrink-0">▸</span>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
